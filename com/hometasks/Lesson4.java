@@ -48,7 +48,7 @@ public class Lesson4 {
         System.out.println("Even Numbers from initial array: ");
         // Print even values from arrayInt
         for(int i = 0; i < arrayInt.length; i++) {
-            if(arrayInt[i] > 0 && arrayInt[i] % 2 == 0) {
+            if(arrayInt[i] >= 0 && arrayInt[i] % 2 == 0) {
                 System.out.print(arrayInt[i] + " ");
             }
         }
