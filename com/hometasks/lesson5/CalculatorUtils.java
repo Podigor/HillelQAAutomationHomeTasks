@@ -37,8 +37,7 @@ public class CalculatorUtils {
         }
         return n / m;
     }
-
-    public static double mod(double n, double m) {
-        return n % m;
+    public static double percent(double n, double m) {//Calculates percentage of the second number from the first number
+        return (m*100)/n;
     }
 }

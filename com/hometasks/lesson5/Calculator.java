@@ -32,7 +32,7 @@ public class Calculator {
                 result = div(number1, number2);
                 break;
             case '%':
-                result = mod(number1, number2);
+                result = percent(number1, number2);
                 break;
             default:
                 System.out.println("Unexpected operator is entered. Program is terminated");
