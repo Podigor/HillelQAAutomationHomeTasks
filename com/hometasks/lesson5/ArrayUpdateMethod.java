@@ -35,7 +35,8 @@ public class ArrayUpdateMethod {
         System.out.println("Enter integer array element to add to the begging of the array:");
         int element = intValueValidation(scanner);
         System.out.println("Updated array with new element at position 0:");
-        addArrayElement(arrayInt, element);
+        int[] resultedArray1 = addArrayElement(arrayInt, element);
+        System.out.println(Arrays.toString(resultedArray1));
         System.out.println("-----------------------");
 
         System.out.println("Enter position for a new element in the initial array (position starts from 0):");
@@ -45,23 +46,24 @@ public class ArrayUpdateMethod {
             System.exit(0);
         }
         System.out.println("Updated array with new element at position" + position + ":");
-        addArrayElement(arrayInt, element, position);
+        int[] resultedArray2 = addArrayElement(arrayInt, element, position);
+        System.out.println(Arrays.toString(resultedArray2));
         System.out.println("-----------------------");
         System.out.println("The program completed successfully!");
     }
 
     //This method accepts array and element
-    public static void addArrayElement(int[] arrayInitial, int element) {
+    public static int[] addArrayElement(int[] arrayInitial, int element) {
         int[] arrayUpdated = new int[arrayInitial.length + 1];
         arrayUpdated[0] = element;
         for (int i = 1; i < arrayUpdated.length; i++) {
             arrayUpdated[i] = arrayInitial[i-1];
         }
-        System.out.println(Arrays.toString(arrayUpdated));
+        return arrayUpdated;
     }
 
     //This method accepts array, element and position
-    public static void addArrayElement(int[] arrayInitial, int element, int position) {
+    public static int[] addArrayElement(int[] arrayInitial, int element, int position) {
         int[] arrayUpdated = new int[arrayInitial.length + 1];
         for (int i = 0; i < arrayUpdated.length; i++) {
             if (i < position) {
@@ -71,7 +73,7 @@ public class ArrayUpdateMethod {
             } else
                 arrayUpdated[i] = arrayInitial[i-1];
         }
-        System.out.println(Arrays.toString(arrayUpdated));
+        return arrayUpdated;
     }
 
     // This method checks if entered value is an integer
