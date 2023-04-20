@@ -6,9 +6,9 @@ import java.util.LinkedHashSet;
 public class Lesson10 {
     public static void main(String[] args) {
         String string = "oil, oil, sausage, milk.";
-        convertStringToArray(string);
+        convertString(string);
     }
-    public static void convertStringToArray(String str) {
+    public static void convertString(String str) {
         String[] strArray = str.replace(",", "").replace(".", "").split(" ");
         for (int i = 0; i < strArray.length; i++) {
             strArray[i] = strArray[i].substring(0,1).toUpperCase() + strArray[i].substring(1);
